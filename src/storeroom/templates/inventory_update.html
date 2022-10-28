@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block body %} 
+<div class="form-control-update">
+    <form action="" method = "POST" >
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div>
+            {{ form.subject.errors }}
+            <label for="description">DESCRIPTION</label>
+            {{form.description}}
+        </div><br>
+        <div>
+            {{ form.subject.errors }}
+            <label for="part number">PART NUMBER</label>
+            {{form.part}}
+        </div><br>
+        <div>
+            {{ form.subject.errors }}
+            <label for="stock">IN STOCK</label>
+            {{form.in_stock}}
+        </div><br>
+        <div class = 'form-control-update button'><button type="submit">ENTER</button></div>
+    </form>
+</div>
+<div class="home">
+    <a href="{% url 'index_view' %}">Home</a>
+  </div>
+{% load static %}
+<script src="{% static 'js/jquery-3.6.0-min.js' %}"></script>
+<script type = 'text/javascript'>
+    $(function() {
+        //when the page has finished loading, autofocus on the part field
+        $('input#id_in_stock').focus();
+    });
+</script>
+{% endblock %} 

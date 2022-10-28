@@ -1,0 +1,9 @@
+# Folders
+venv/
+.vscode/
+data/
+exe_files/
+
+
+# Files
+.env

@@ -1,0 +1,8 @@
+{% extends "base.html" %} {% block body %}
+<div class="main-button">
+  <a href="{% url 'part_view' %}"><button>ADD/REMOVE ITEMS</button></a>
+  <a href="{% url 'inventory_start' %}"><button>START INVENTORY</button></a>
+  <!-- <a href="{% url 'inventory_view' %}"><button>SHOW AVAILABLE PARTS</button></a> -->
+  <a href="{% url 'purchase_orders' %}"><button>PART ORDERS</button></a>
+</div>
+{% endblock %}

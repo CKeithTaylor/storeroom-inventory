@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    <meta charset="utf-8" />
+    {% block head %}{% endblock %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Storeroom</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+  </head>
+  <header class="headWrapper">
+    <div>
+      <h1>STOREROOM INVENTORY</h1>
+    </div>
+  </header>
+  <div class="divider">
+    <div class="divider fade"></div>
+  </div>
+  <body>
+    {%block body%}{%endblock%}
+  </body>
+</html>

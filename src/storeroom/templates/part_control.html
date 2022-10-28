@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block body %}{% load static %}
+<div class="form-control-update">
+  <div>
+    <p><strong>STORAGE LOCATION: </strong>{{object.storage_loc}}</p>
+  </div>
+  <div>
+    <p><strong>DESCRIPTION: </strong>{{object.description}}</p>
+  </div>
+  <div>
+    <p><strong>PART NUMBER: </strong>{{object.part}}</p>
+  </div>
+  <div>
+    <p><strong>IN STOCK: </strong>{{object.in_stock}}</p>
+  </div>
+  <br />
+  <form action="" method="POST" name="adjustment">
+    {% csrf_token %}
+    <div>
+      <label for="number">QUANTITY</label
+      ><input type="text" name="number" id="number" />
+    </div>
+    <div>
+      <input type="hidden" name="item" value="{{object.storage_loc}}" />
+    </div>
+    <br />
+    <div class="form-control-update button">
+      <button type="submit" name="change" value="add">ADD</button><br />
+      <button type="submit" name="change" value="remove">REMOVE</button>
+    </div>
+  </form>
+</div>
+<div class="home">
+  <a href="{% url 'index_view' %}">Home</a>
+</div>
+{% load static %}
+<script src="{% static 'js/jquery-3.6.0-min.js' %}"></script>
+<script type="text/javascript">
+  $(function () {
+    //when the page has finished loading, autofocus on the number field
+    $("input#id_number").focus();
+  });
+</script>
+{% endblock %}

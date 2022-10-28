@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% load static %} {% block body %}
+<div class="table-control">
+  <table>
+    <tr>
+      <th>STORAGE</th>
+      <th>DESCRIPTION</th>
+      <th>PART NUMBER</th>
+      <th>VENDOR</th>
+      <th>ON HAND</th>
+      <th>MAX INVENTORY</th>
+      <th>REORDER POINT</th>
+      <th>REORDER AMOUNT</th>
+      <th>LOCATION</th>
+      <th>LAST UPDATE</th>
+    </tr>
+    <tr>
+      {% for Inventory in object_list %}
+      <td>{{Inventory.storage_loc}}</td>
+      <td style="text-align: left">{{Inventory.description}}</td>
+      <td style="text-align: left">{{Inventory.part}}</td>
+      <td style="text-align: left">{{Inventory.vendor}}</td>
+      <td>{{Inventory.in_stock}}</td>
+      <td>{{Inventory.max_stock}}</td>
+      <td>{{Inventory.reorder}}</td>
+      <td>{{Inventory.reorder_amt}}</td>
+      <td>{{Inventory.location}}</td>
+      <td>{{Inventory.inv_date}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+<div class="home">
+  <a href="{% url 'index_view' %}">Home</a>
+</div>
+
+{% endblock %}

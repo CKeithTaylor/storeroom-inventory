@@ -1,0 +1,161 @@
+* {
+  font-family: Tahoma;
+  box-sizing: border-box;
+}
+.headWrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 1em;
+  margin: 1em;
+  justify-items: center;
+  color: #29176d;
+}
+
+.home a {
+  display: grid;
+  text-decoration: none;
+  justify-items: center;
+  color: #29176d;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.home a:hover {
+  color: #eb0129;
+}
+
+.divider {
+  position: relative;
+  margin-top: 35px;
+  height: 3px;
+  padding-bottom: 50px;
+}
+
+.fade:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  height: 3px;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    rgb(48, 49, 51),
+    transparent
+  );
+}
+
+.table-control {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  font-size: small;
+}
+
+.table-control table,
+th,
+td {
+  text-align: center;
+  margin-bottom: 2em;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.table-control th {
+  background-color: #29176d;
+  color: #f8f8f8;
+}
+
+.table-control tr:nth-child(even) {
+  background-color: #e5e5e5;
+}
+
+.main-button {
+  display: grid;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 1em;
+  margin-bottom: 3em;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  column-gap: 3em;
+  row-gap: 2em;
+}
+
+.main-button button {
+  background-color: #f8f8f8;
+  color: #29176d;
+  height: 8em;
+  width: 16em;
+  font-weight: bold;
+  font-size: 20px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2em;
+  box-shadow: 2px 9px #999;
+}
+
+.main-button button:hover {
+  background-color: #29176d;
+  color: #f8f8f8;
+}
+
+.main-button button:active {
+  background-color: #29176d;
+  color: #f8f8f8;
+  box-shadow: 0 4px #665665;
+  transform: translate(2px, 5px);
+}
+
+.form-control {
+  display: grid;
+  justify-content: center;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.form-control form {
+  text-align: center;
+}
+
+.form-control button {
+  height: 4em;
+  width: 8em;
+  font-weight: bold;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2em;
+}
+
+.form-control-update {
+  display: grid;
+  justify-content: center;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.form-control-update form {
+  text-align: left;
+}
+
+.form-control-update button {
+  text-align: center;
+  height: 4em;
+  width: 8em;
+  font-weight: bold;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2em;
+}
+
+.alert {
+  color: #eb0129;
+  padding-bottom: 10px;
+}

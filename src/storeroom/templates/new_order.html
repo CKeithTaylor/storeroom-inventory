@@ -1,0 +1,136 @@
+{% extends 'base.html' %} {% block body %} {% load static %}
+
+  <!-- <div class="form-control-update">
+    <form action="" method = "POST" >
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div>
+            {{ form.subject.errors }}
+            <label for="form_date">DATE</label>
+            {{form.form_date}}
+        </div><br>
+        <div>
+            {{ form.subject.errors }}
+            <label for="receive_date">RECEIVED</label>
+            {{form.receive_date}}
+        </div><br>
+        <div>
+            {{ form.subject.errors }}
+            <label for="purchaser">PURCHASER</label>
+            {{form.purchaser}}
+        </div><br>
+        <div>
+          {{ form.subject.errors }}
+          <label for="quote">QUOTE</label>
+          {{form.quote}}
+        </div><br>
+        <div>
+          {{ form.subject.errors }}
+         <label for="PO">PO</label>
+          {{form.PO}}
+        </div><br>
+        <div>
+          {{ form.subject.errors }}
+          <label for="invoice">INVOICE</label>
+          {{form.invoice}}
+      </div><br>
+      <div>
+        {{ form.subject.errors }}
+        <label for="account_code">ACCOUNT CODE</label>
+        {{form.acct_code}}
+    </div><br>
+    <div>
+      {{ form.subject.errors }}
+      <label for="part">PART NUMBER</label>
+      {{form.part}}
+  </div><br>
+  <div>
+    {{ form.subject.errors }}
+    <label for="quantity">QUANTITY</label>
+    {{form.quantity}}
+  </div><br>
+  <div>
+    {{ form.subject.errors }}
+    <label for="cost">UNIT COST</label>
+    {{form.cost}}
+  </div><br>
+  <div>
+    {{ form.subject.errors }}
+    <label for="tax">TAX</label>
+    {{form.tax}}
+  </div><br>
+  <div>
+    {{ form.subject.errors }}
+    <label for="shipping">SHIPPING</label>
+    {{form.shipping}}
+  </div><br>
+  <div>
+    {{ form.subject.errors }}
+    <label for="total">TOTAL</label>
+    {{form.total}}
+  </div><br>
+  <div>
+    {{ form.subject.errors }}
+    <label for="reason">PURPOSE</label>
+    {{form.reason_code}}
+  </div><br>
+  <div>
+    {{ form.subject.errors }}
+    <label for="reconcile">RECONCILED</label>
+    {{form.reconcile_date}}
+  </div><br>
+        <div class = 'form-control-update button'><button type="submit">ENTER</button></div>
+    </form>
+</div> -->
+  <table>
+    <form action="" method = "POST" >
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+    <tr>
+      <th>ORDER DATE</th>
+      <th>RECEIVED</th>
+      <th>PURCHASER</th>
+      <th>QUOTE</th>
+      <th>PO</th>
+      <th>INVOICE</th>
+      <th>ACCOUNT CODE</th>
+      </tr>
+      <tr>
+        <td>{{ form.subject.errors }} {{form.order_date}}</td>
+        <td>{{ form.subject.errors }} {{form.receive_date}}</td>
+        <td>{{ form.subject.errors }} {{form.purchaser}}</td>
+        <td>{{ form.subject.errors }} {{form.quote}}</td>
+        <td>{{ form.subject.errors }} {{form.PO}}</td>
+        <td>{{ form.subject.errors }} {{form.invoice}}</td>
+        <td>{{ form.subject.errors }} {{form.acct_code}}</td>
+        </tr><br>
+    <tr>
+      <th>PART NUMBER</th>
+      <th>QUANTITY</th>
+      <th>UNIT COST</th>
+      <th>TAX</th>
+      <th>SHIPPING</th>
+      <th>TOTAL</th>
+      <th>PURPOSE</th>
+    </tr>
+    <tr>
+      <td>{{ form.subject.errors }} {{form.part}}</td>
+      <td>{{ form.subject.errors }} {{form.quantity}}</td>
+      <td>{{ form.subject.errors }} {{form.cost}}</td>
+      <td>{{ form.subject.errors }} {{form.tax}}</td>
+      <td>{{ form.subject.errors }} {{form.shipping}}</td>
+      <td>{{ form.subject.errors }} {{form.total}}</td>
+      <td>{{ form.subject.errors }} {{form.reason_code}}</td>
+    </tr>
+   </table>
+</div>
+<div class="form-control-update button">
+  <button type="submit" name="save_order" value="save_order">SAVE</button>
+</div>
+</form>
+<div class="home">
+  <a href="{% url 'index_view' %}">Home</a>
+</div>
+
+
+{% endblock %}
