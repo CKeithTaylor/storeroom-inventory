@@ -22,36 +22,24 @@ class OrderForm(forms.ModelForm):
         fields = (
             "order_date",
             "receive_date",
-            "reconcile_date",
-            "purchaser",
-            "quote",
-            "PO",
             "invoice",
-            "acct_code",
             "part",
             "quantity",
             "cost",
             "tax",
             "shipping",
             "total",
-            "reason_code",
         )
 
     order_date = forms.DateField(widget=forms.DateInput(attrs={}))
     receive_date = forms.DateField(required=False, widget=forms.DateInput(attrs={}))
-    reconcile_date = forms.DateField(required=False, widget=forms.DateInput(attrs={}))
-    purchaser = forms.CharField(widget=forms.TextInput(attrs={}))
-    quote = forms.CharField(required=False, widget=forms.TextInput(attrs={}))
-    PO = forms.CharField(required=False, widget=forms.TextInput(attrs={}))
     invoice = forms.CharField(required=False, widget=forms.TextInput(attrs={}))
-    acct_code = forms.CharField(required=False, widget=forms.TextInput(attrs={}))
     part = forms.CharField(widget=forms.TextInput(attrs={}))
     quantity = forms.CharField(widget=forms.TextInput(attrs={}))
     cost = forms.CharField(widget=forms.TextInput(attrs={}))
     tax = forms.CharField(required=False, widget=forms.TextInput(attrs={}))
     shipping = forms.CharField(required=False, widget=forms.TextInput(attrs={}))
     total = forms.CharField(widget=forms.TextInput(attrs={}))
-    reason_code = forms.CharField(widget=forms.TextInput(attrs={}))
 
 
 class InventoryUpdateForm(forms.ModelForm):

@@ -4,37 +4,25 @@
     <tr>
       <th>ORDER DATE</th>
       <th>RECEIVED</th>
-      <th>PURCHASER</th>
-      <th>QUOTE</th>
-      <th>PO</th>
       <th>INVOICE</th>
-      <th>ACCOUNT CODE</th>
       <th>PART NUMBER</th>
       <th>QUANTITY</th>
       <th>UNIT COST</th>
       <th>TAX</th>
       <th>SHIPPING</th>
       <th>TOTAL</th>
-      <th>PURPOSE</th>
-      <th>RECONCILED</th>
     </tr>
     <tr>
       {% for Order in object_list %}
       <td>{{Order.order_date}}</td>
       <td>{{Order.receive_date}}</td>
-      <td>{{Order.purchaser}}</td>
-      <td>{{Order.quote}}</td>
-      <td>{{Order.PO}}</td>
       <td>{{Order.invoice}}</td>
-      <td>{{Order.acct_code}}</td>
       <td>{{Order.part}}</td>
       <td>{{Order.quantity}}</td>
       <td>{{Order.cost}}</td>
       <td>{{Order.tax}}</td>
       <td>{{Order.shipping}}</td>
       <td>{{Order.total}}</td>
-      <td>{{Order.reason_code}}</td>
-      <td>{{Order.reconcile_date}}</td>
     </tr>
     {% endfor %}
   </table>

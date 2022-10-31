@@ -30,25 +30,19 @@ class Inventory(models.Model):
 
 class Order(models.Model):
     class Meta:
-        db_table = "purchase_orders"
+        db_table = "orders"
         managed = True
         ordering = ["-order_date"]
 
     part = models.ForeignKey(Inventory, on_delete=models.CASCADE)
     order_date = models.DateField(default=date.today(), blank=False)
     receive_date = models.DateField(default=date.today(), blank=False)
-    reconcile_date = models.DateField(default=date.today(), blank=False)
-    purchaser = models.CharField(max_length=64, default="MDP", blank=True, null=True)
-    quote = models.CharField(max_length=64, default="", blank=True, null=True)
-    PO = models.CharField(max_length=64, default="", blank=True, null=True)
     invoice = models.CharField(max_length=64, default="", blank=True, null=True)
-    acct_code = models.CharField(max_length=64, default="", blank=True, null=True)
     quantity = models.IntegerField(default=1, blank=True, null=True)
     cost = models.IntegerField(default=1, blank=True, null=True)
     tax = models.IntegerField(default=1, blank=True, null=True)
     shipping = models.IntegerField(default=1, blank=True, null=True)
     total = models.IntegerField(default=0, blank=True, null=True)
-    reason_code = models.CharField(max_length=64, default="cuz", blank=True, null=True)
 
     def __str__(self):
         return self.id
